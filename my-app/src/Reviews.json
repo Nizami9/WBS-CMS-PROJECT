@@ -2,24 +2,28 @@
     {
     "name": "New York Times",
     "year": "2022",
-    "quote": "Best cookbook of the year"
+    "quote": "Best cookbook of the year",
+    "image": "https://assets.stickpng.com/thumbs/5853c5a6ec0c270fc2f62dfd.png"
   },
   
   {
     "name": "My Mom",
     "year": "2021",
-    "quote": "Meh"
+    "quote": "Meh",
+    "image": "https://assets.stickpng.com/thumbs/580b585b2edbce24c47b2d46.png"
   },
   
   {
     "name": "Cosmopolitan",
     "year": "2022",
-    "quote": "Awesome"
+    "quote": "Awesome",
+    "image": "https://assets.stickpng.com/thumbs/5853c66dec0c270fc2f62dff.png"
   },
   
   {
     "name": "other important people",
     "year": "2022",
-    "quote": "All you need is this cookbook"
+    "quote": "All you need is this cookbook",
+    "image": "https://assets.stickpng.com/thumbs/6030ec2ca5a87000040e2b8d.png"
   }
   ] }
