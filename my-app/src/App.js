@@ -24,14 +24,11 @@ const App = () => {
         );
         console.log("after axios");
         console.log (data);
-       // setJsonArticle(data);
+        setArticles(data);
       } catch (err) {
       } 
     };
     fetchData();
-
-
-
     // client
     //   .getEntries()
     //   .then((response) => {
@@ -52,7 +49,7 @@ const App = () => {
           </header>
           <main>
             <div className="Navbar">
-              {/* <Navbar articles={articles} /> */}
+              <Navbar articles={articles} />
             </div>
 
             {/* <div className="wrapper">

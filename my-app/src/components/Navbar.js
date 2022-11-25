@@ -9,8 +9,9 @@ import Salads from "./Salads";
 import Desserts from "./Desserts";
 import FullRecipe from "./FullRecipe";
 import Main from "./Main";
+import JsonRecipe from "./JsonRecipe";
 function Navbar({articles}) {
-console.log(articles)
+console.log("artcle in nav",articles)
   return (
     <div>
       <ul className="links-section">
@@ -56,11 +57,16 @@ console.log(articles)
         <Route path="/soups" element={<Soup articles={articles}/>} />
         <Route path="/salads" element={<Salads articles={articles}/>} />
         <Route path="/desserts" element={<Desserts articles={articles}/>} />
-        <Route path='/breakfast/:recipe' element={<FullRecipe articles={articles}/>} />
+        {/* <Route path='/breakfast/:recipe' element={<FullRecipe articles={articles}/>} />
         <Route path='/mainDishes/:recipe' element={<FullRecipe articles={articles}/>} />
         <Route path='/soups/:recipe' element={<FullRecipe articles={articles}/>} />
         <Route path='/salads/:recipe' element={<FullRecipe articles={articles}/>} />
-        <Route path='/desserts/:recipe' element={<FullRecipe articles={articles}/>} />
+        <Route path='/desserts/:recipe' element={<FullRecipe articles={articles}/>} /> */}
+        <Route path='/breakfast/:recipe' element={<JsonRecipe articles={articles}/>} />
+        <Route path='/mainDishes/:recipe' element={<JsonRecipe articles={articles}/>} />
+        <Route path='/soups/:recipe' element={<JsonRecipe articles={articles}/>} />
+        <Route path='/salads/:recipe' element={<JsonRecipe articles={articles}/>} />
+        <Route path='/desserts/:recipe' element={<JsonRecipe articles={articles}/>} />
       </Routes>
     </div>
   );
