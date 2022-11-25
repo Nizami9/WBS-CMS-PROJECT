@@ -12,7 +12,7 @@ function Desserts({articles}) {
         </div>
         <div><NavLink to='/desserts/tiramisu' ><img src={require('../images/tiramisu.webp')} alt='tiramisu' />
             <p>Tiramisu</p></NavLink> </div>
-            <div ><NavLink to='/desserts/peach' ><img src={require('../images/White_chocolate_and_peach_trifle.png')} alt='strawberry-mousse' />
+            <div ><NavLink to='/desserts/peach' ><img src={require('../images/white2.jpeg')} alt='strawberry-mousse' />
             <p>White Chocolate and Peach Trifle</p></NavLink>
         </div>
         <div><NavLink to='/desserts/dessert' ><img src={require('../images/rosewater_trifle_cake.png')} alt='tiramisu' />
