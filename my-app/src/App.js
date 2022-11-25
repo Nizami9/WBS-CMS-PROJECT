@@ -7,18 +7,24 @@ import Main from "./components/Main";
 import { useState, useEffect } from "react";
 import React from "react";
  import "./App2.css";
-import { JsonData } from "./client";
+
 import Posts from "./components/Posts";
+
+import axios from 'axios';
+
+
+
 
 const App = () => {
   const [articles, setArticles] = useState([]);
-
+ 
+    
   useEffect( () => {
-    JsonData
-      .getEntries()
-      .then((response) => {
-        console.log(response.items);
-        setArticles(response.items);
+    axios.get('http://localhost:3030/receipes')
+          .then((data) => {
+    console.log(data.data);
+        // setArticles(data.items);
+        // console.log(data.items);
       })
       .catch(console.error);
   }, [])

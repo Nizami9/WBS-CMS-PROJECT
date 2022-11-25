@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default function JsonData () {
+export default function jsonData() {
 const url='http://localhost:3030/';
 const getRecipes=()=>{
     axios.get(`${url}receipes`)
