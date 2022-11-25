@@ -1,6 +1,8 @@
 import React from 'react';
 import Post from './Post';
 import CookingBubble from './CookingBubble';
+import JsonRecipe from './JsonRecipe';
+import PostJson from './PostJson'
 
 const Main = ({articles}) => {
   let topFive=[];
@@ -9,8 +11,7 @@ const Main = ({articles}) => {
   for(let i=0;i<5;i++){
     topFive.push(articles[i]);
   }
-   console.log("topFive are ", topFive);
-  
+ 
   return (
     <>
     <CookingBubble />
@@ -19,8 +20,9 @@ const Main = ({articles}) => {
           <h2>Our Latest Recipes</h2>
           <div className='allPosts2'>
             {
-              topFive.map((article, index) =>
-                <Post article={article} key={index} />
+              topFive.map((article, index) =>  
+              <PostJson article={article} key={index} />
+            // <Post article={article} key={index} />
               )}
           </div>
         </div>
