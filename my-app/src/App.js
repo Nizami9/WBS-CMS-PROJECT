@@ -7,14 +7,14 @@ import Main from "./components/Main";
 import { useState, useEffect } from "react";
 import React from "react";
  import "./App2.css";
-import { client } from "./client";
+import { JsonData } from "./client";
 import Posts from "./components/Posts";
 
 const App = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect( () => {
-    client
+    JsonData
       .getEntries()
       .then((response) => {
         console.log(response.items);
