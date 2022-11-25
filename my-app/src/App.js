@@ -9,18 +9,36 @@ import React from "react";
  import "./App2.css";
 import { client } from "./client";
 import Posts from "./components/Posts";
+import axios from 'axios';
 
 const App = () => {
   const [articles, setArticles] = useState([]);
+  const [jsonArticle,setJsonArticle]=useState([]);
 
   useEffect( () => {
-    client
-      .getEntries()
-      .then((response) => {
-        console.log(response.items);
-        setArticles(response.items);
-      })
-      .catch(console.error);
+
+    const fetchData = async () => {
+      try {
+        const {data}= await axios.get(
+          "http://localhost:3030/receipes"
+        );
+        console.log("after axios");
+        console.log (data);
+       // setJsonArticle(data);
+      } catch (err) {
+      } 
+    };
+    fetchData();
+
+
+
+    // client
+    //   .getEntries()
+    //   .then((response) => {
+    //     console.log(response.items);
+    //     setArticles(response.items);
+    //   })
+    //   .catch(console.error);
   }, [])
 
   return (
@@ -34,7 +52,7 @@ const App = () => {
           </header>
           <main>
             <div className="Navbar">
-              <Navbar articles={articles} />
+              {/* <Navbar articles={articles} /> */}
             </div>
 
             {/* <div className="wrapper">
